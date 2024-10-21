@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react"
+import { Link, useLocation } from "react-router-dom";
 
 
 const Navbar = () => {
@@ -13,6 +14,8 @@ const Navbar = () => {
     
     const [active, setActive] = useState(false)
     const [open, setOpen] = useState(false)
+
+    const {pathname} = useLocation()
     
     const currentUser = {
         id: 1,
@@ -20,7 +23,7 @@ const Navbar = () => {
         isSeller : true
     }
   return (
-   <div className={active ? `bg-white text-black` : `w-full flex flex-col bg-[#113118] text-white`}>
+   <div className={active || pathname !== '/' ? `bg-white text-black` : `w-full flex flex-col bg-[#113118] text-white`}>
      <div className="flex items-center justify-between py-3 px-48" style={{transition : `0.8s all ease`}}>
         <h1 className="text-2xl font-bold">Fiverr.</h1>
         <div className="flex items-center gap-5 font-semibold text-sm">
@@ -37,13 +40,13 @@ const Navbar = () => {
                 {open && (<div className="flex flex-col gap-1 absolute top-11 right-0 bg-white text-gray-300 py-5 px-5 w-44 rounded">
                     {currentUser?.isSeller && (
                          <>
-                         <span>Gigs</span>
-                         <span>Add a new Gigs</span>
+                         <Link to='/gigs'>Gigs</Link>
+                         <Link to='/gig'>Add a new Gigs</Link>
                         </> 
                     )}
-                    <span>Order</span>
-                    <span>Messages</span>
-                    <span>Logout</span>
+                    <Link to='/orders'>Order</Link>
+                    <Link to='/messages'>Messages</Link>
+                    <Link to='/logout'>Logout</Link>
                 </div>)}
             </div>
            )}
@@ -51,11 +54,17 @@ const Navbar = () => {
         </div>
       </div>
       {
-        active && (
+        active || pathname !=='/' && (
         <>
            <hr className="w-full border-[0.2px] border-gray-200" style={{}}/>  
             <div className="flex item-center justify-between px-48">
                 <span>test1</span>
+                <span>test2</span>
+                <span>test2</span>
+                <span>test2</span>
+                <span>test2</span>
+                <span>test2</span>
+                <span>test2</span>
                 <span>test2</span>
             </div>
         </>
