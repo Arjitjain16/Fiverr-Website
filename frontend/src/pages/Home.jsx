@@ -1,10 +1,13 @@
-// import Navbar from "../components/Navbar"
+import Features from "../components/Features"
+
+
 
 
 const Home = () => {
   return (
     <div>
-      Home
+   
+      <Features/> 
     </div>
   )
 }
