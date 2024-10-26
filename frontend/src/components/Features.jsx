@@ -1,8 +1,8 @@
 
 const Features = () => {
   return (
-    <div className="bg-[#113118] px-48 flex text-white w-full">
-        <div className="flex flex-col justify-center gap-3 w-1/2 ">
+    <div className="bg-[#113118]  flex text-white w-full rounded-2xl">
+        <div className="flex flex-col justify-center gap-3 w-1/2 px-8 ">
             <h1 className="text-3xl font-bold w-full">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</h1>
             <div className="w-full relative">
               <input type="text" className="w-[75%] border py-1 text-black rounded" />

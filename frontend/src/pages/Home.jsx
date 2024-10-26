@@ -3,13 +3,14 @@ import Slide from "../components/Slide"
 import {cards} from "../data"
 import CatCard from '../components/CatCard';
 import Freelancer from "../components/Freelancer";
+import FiverrPro from "../components/FiverrPro";
 
 
 
 
 const Home = () => {
   return (
-    <div>
+    <div className="px-20 py-8">
       <Features/> 
       <Slide arrowsScroll={5} slidesToShow={5}>
         {cards.map((card)=>(
@@ -17,6 +18,7 @@ const Home = () => {
         ))}
       </Slide>
       <Freelancer/>
+      < FiverrPro/>
     </div>
   )
 }

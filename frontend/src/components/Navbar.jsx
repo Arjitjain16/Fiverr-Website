@@ -24,7 +24,7 @@ const Navbar = () => {
     }
   return (
    <div className={active || pathname !== '/' ? `bg-white text-black` : `w-full flex flex-col bg-[#113118] text-white`}>
-     <div className="flex items-center justify-between py-3 px-48" style={{transition : `0.8s all ease`}}>
+     <div className="flex items-center justify-between py-6 px-20" style={{transition : `0.8s all ease`}}>
         <h1 className="text-2xl font-bold">Fiverr.</h1>
         <div className="flex items-center gap-5 font-semibold text-sm">
             <h3>Fiverr Business</h3>

@@ -1,8 +1,8 @@
 
 const Freelancer = () => {
   return (
-    <div className="w-full h-[100vh] flex py-8 px-3 ">
-        <div className="w-1/2 flex flex-col gap-7 h-full">
+    <div className="w-full h-[100vh] flex py-8 px-3 rounded-2xl">
+        <div className="w-1/2 flex flex-col gap-9 h-full">
           <h1 className="text-4xl">A whole world of freelance talent at your fingertips</h1>
           <div className="flex flex-col gap-2">
             <div className="flex items-center gap-3">
